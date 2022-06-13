@@ -10,4 +10,4 @@ Esta api foi criada contendo as seguintes rotas
 - notes/recicle (PUT) recebe {id_note: int} retorna {message: "Note foi reciclado", statusCode:200, notes:{}}
 
 ## Banco de dados
-Para o banco, foi criado um docker-compose.yml que sobe um banco mysql utilizando as variaveis de ambiente do projeto.
+Para o banco, foi criado um docker-compose.yml que sobe um banco mysql utilizando as variaveis de ambiente do projeto. Há a utilização de migrations do laravel, ao subir o banco, basta rodar as migrations.

@@ -7,8 +7,7 @@ services:
       volumes:
         - ./.docker/dbdata:/var/lib/mysql
       environment:
-        MYSQL_DATABASE: {DB_DATABASE}
-        MYSQL_ROOT_PASSWORD: {DB_PASSWORD}
+        - .env
       networks:
         - app-network
 networks:
