@@ -1,0 +1,16 @@
+version: '3'
+services:
+    mysql-app:
+      image: mysql:5.7.22
+      ports:
+        - "3307:3306"
+      volumes:
+        - ./.docker/dbdata:/var/lib/mysql
+      environment:
+        MYSQL_DATABASE: {DB_DATABASE}
+        MYSQL_ROOT_PASSWORD: {DB_PASSWORD}
+      networks:
+        - app-network
+networks:
+  app-network:
+    driver: bridge
