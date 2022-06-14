@@ -74,7 +74,7 @@ class Notes extends Controller
             if (!$note) {
                 throw new Exception($this::DATA_NOT_FOUND, Response::HTTP_NOT_FOUND);
             }
-            $this->data['message'] = "Your note $note->title";
+            $this->data['message'] = "Note $note->title";
             $this->data['notes'] = $note->toArray();
             $this->response->setContent($this->data);
             return $this->response;

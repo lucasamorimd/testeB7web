@@ -1,15 +1,18 @@
-version: '3'
+version: '2'
+
 services:
-    mysql-app:
-      image: mysql:5.7.22
-      ports:
-        - "3307:3306"
-      volumes:
-        - ./.docker/dbdata:/var/lib/mysql
-      environment:
-        - .env
-      networks:
-        - app-network
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: minhasenha123
+      MYSQL_DATABASE: apinotes
+      MYSQL_USER: apinotes
+      MYSQL_PASSWORD: minhasenha123
+    volumes:
+      - ./.docker/dbdata:/var/lib/mysql
+    ports:
+      - '3307:3306'
 networks:
   app-network:
     driver: bridge

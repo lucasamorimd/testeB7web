@@ -11,3 +11,10 @@ Esta api foi criada contendo as seguintes rotas
 
 ## Banco de dados
 Para o banco, foi criado um docker-compose.yml que sobe um banco mysql utilizando as variaveis de ambiente do projeto. Há a utilização de migrations do laravel, ao subir o banco, basta rodar as migrations.
+
+## Subindo ambiente
+após clonar o repositório, instalar as dependências.
+
+- docker-compose up para subir o banco de dados,
+- php artisan serve para subir o backend e remover o .example do .env.example
+Obs.: Caso suba com uma porta diferente (8000), alterar a porta no .env do projeto frontend
